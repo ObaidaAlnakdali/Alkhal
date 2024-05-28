@@ -30,12 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
           
           // Set inner HTML for the cart item
           cartItemDiv.innerHTML = `
-                <img src="${item.imageUrl}" alt="${item.name}">
-                <div class="item-details">
-                  <h3>${item.name}</h3>
-                  <p>Price: $${item.price.toFixed(2)}</p>
-                  <p>Quantity: ${item.count}</p>
-                </div>
+                0
           `;
           
           totalElement.innerHTML = "Total: $" + total.toFixed(2);

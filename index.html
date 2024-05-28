@@ -91,20 +91,12 @@
   </section>
 
   <section class="menu">
-
-
-
-    
     <div class="items" id="items">
-      
-
   </section>
 
   <a class="whatsapp-icon" id="whatsapp-icon" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-
-
 
   <section>
     <div class="contact-container">
@@ -120,7 +112,7 @@
             <div class="form-group">
                 <label for="phone">Phone</label>
                 <input type="text" id="phone" name="phone">
-                <small class="error-message" id="phone-error" style="display: none;">Phone is required</small>
+                <small class="error-message" id="phone-error" style="display: none;">Phone is required and must be 8 digits</small>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -233,7 +225,7 @@
           document.getElementById('name-error').style.display = 'none';
       }
   
-      if (!phone) {
+      if (!phone || !validatePhone(phone)) {
           isValid = false;
           document.getElementById('phone-error').style.display = 'block';
       } else {
@@ -267,6 +259,12 @@
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return re.test(String(email).toLowerCase());
   }
+
+  function validatePhone(phone) {
+      const re = /^\d{8}$/;
+      return re.test(phone);
+  }
+  
   </script>
   
 </body>
