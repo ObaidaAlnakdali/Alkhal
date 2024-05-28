@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
         // Open WhatsApp with the message
         window.open(whatsappUrl, "_blank");
+        localStorage.removeItem("cartItems");
       } else {
         alert("Your cart is empty.");
       }
