@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
         message += `\nTotal: $${total.toFixed(2)}`;
         var encodedMessage = encodeURIComponent(message);
-        var whatsappUrl = `https://wa.me/76482570?text=${encodedMessage}`;
+        var whatsappUrl = `https://wa.me/79318132?text=${encodedMessage}`;
   
         // Open WhatsApp with the message
         window.open(whatsappUrl, "_blank");
