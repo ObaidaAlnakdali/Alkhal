@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .ftco-section {
+            padding: 4em 0;
+            background: #f7be16;
+            color: #333;
+        }
+        .heading-section {
+            margin-bottom: 3em;
+        }
+        .heading-section h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .heading-section p {
+            font-size: 18px;
+            color: #666;
+        }
+        .services {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .services:hover {
+            transform: translateY(-10px);
+        }
+        .services .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+        }
+        .services .heading {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .services p {
+            font-size: 16px;
+            color: #666;
+        }
+        .icon-background {
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+        }
+        .icon-background i {
+            vertical-align: middle;
+        }
+        /* WhatsApp Icon Styles */
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            font-size: 30px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 1000;
+            display: none; /* Initially hidden */
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+  <section class="ftco-section ftco-services">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section text-center">
+          <h2 class="mb-4">Our Services</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="services">
+            <div class="icon-background">
+              <i class="fas fa-apple-alt icon"></i>
+            </div>
+            <div class="media-body">
+              <h3 class="heading">Healthy Foods</h3>
+              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="services">
+            <div class="icon-background">
+              <i class="fas fa-bicycle icon"></i>
+            </div>
+            <div class="media-body">
+              <h3 class="heading">Fastest Delivery</h3>
+              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="services">
+            <div class="icon-background">
+              <i class="fas fa-pizza-slice icon"></i>
+            </div>
+            <div class="media-body">
+              <h3 class="heading">Original Recipes</h3>
+              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="whatsapp-icon" id="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setInterval(function() {
+            var whatsappIcon = document.getElementById('whatsapp-icon');
+            whatsappIcon.style.display = 'flex';
+        }, 10000); // 10 seconds in milliseconds
+
+        var whatsappIcon = document.getElementById('whatsapp-icon');
+        whatsappIcon.addEventListener('click', function() {
+            window.location.href = 'https://wa.me/79318132'; // Replace with your WhatsApp number
+        });
+    });
+  </script>
+</body>
+</html>
