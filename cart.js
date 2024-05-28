@@ -53,8 +53,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Call the function to display cart items when the page loads
     displayCartItems();
 
-
-    
+    var whatsappOrderBtn = document.getElementById("whatsapp-order-btn");
+    function sendOrderToWhatsApp() {
+      var cartItems = JSON.parse(localStorage.getItem("cartItems"));
+      if (cartItems && cartItems.length > 0) {
+        var message = "Order Details:\n\n";
+        var total = 0;
+  
+        cartItems.forEach(function (item) {
+          message += `${item.name} - $${item.price.toFixed(2)} x ${item.count}\n`;
+          total += item.price * item.count;
+        });
+  
+        message += `\nTotal: $${total.toFixed(2)}`;
+        var encodedMessage = encodeURIComponent(message);
+        var whatsappUrl = `https://wa.me/76482570?text=${encodedMessage}`;
+  
+        // Open WhatsApp with the message
+        window.open(whatsappUrl, "_blank");
+      } else {
+        alert("Your cart is empty.");
+      }
+    }
+    whatsappOrderBtn.addEventListener("click", sendOrderToWhatsApp);
 
   });
   
